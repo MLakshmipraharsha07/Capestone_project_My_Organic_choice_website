@@ -37,7 +37,7 @@ app.get("/signinsubmit", (req, res) => {
         .get()
         .then((docs) => {
             if (docs.size > 0) {
-                res.render("home");
+                res.render("index");
             }else {
                 res.render("loginfail");
             }
@@ -60,7 +60,7 @@ app.get("/signupsubmit", (req, res) => {
             rpwd: rpwd,
         })
         .then(()=>{
-            res.render("home");
+            res.render("index");
         });
 });
 
